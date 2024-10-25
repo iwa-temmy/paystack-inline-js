@@ -4,14 +4,6 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  /**
-   * Initiates a payment transaction using Paystack.
-   *
-   * This function sets up a payment handler with the provided details and opens an iframe for the payment process.
-   * It also includes callback functions for payment success and window closure.
-   *
-   * @return {void}
-   */
   const payWithPaystack = () => {
     const handler = typeof window !== "undefined" && window?.PaystackPop.setup({
       key: "pk_test_7651ae240fd99655d503b96ee8872926e841983c", // Replace with your public key
